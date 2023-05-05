@@ -1,0 +1,14 @@
+{
+  "name": "TechGlobal",
+  "password": "Test1234",
+  "email": "hello@cypress.io",
+  "body": "Fixtures are a great way to mock data for responses to routes",
+  "languages": ["Java", "JavaScript", "C#"],
+  "staticTableRows": [
+    ["1", "Amazon", "1,523,000", "USA"],
+    ["2", "Alibaba", "245,700", "China"],
+    ["3", "Microsoft", "221,000", "USA"],
+    ["4", "Apple", "154,000", "USA"],
+    ["5", "Samsung", "116,915", "S. Korea"]
+  ]
+}
