@@ -12,7 +12,10 @@ describe('IFrames Page', () => {
   })
 
   it('should fill out and submit the form inside the iframe', () => {
-    iFramesPage.fillOutForm('John', 'Doe')
-    iFramesPage.getResult().should('have.text', IFramesTexts.RESULT_MESSAGE)
+    const firstName = 'John'
+    const lastName = 'Doe'
+    iFramesPage.fillOutForm(firstName, lastName)
+    const expectedText = `${IFramesTexts.RESULT_MESSAGE}`.replace('{name}', `${firstName} ${lastName}`)
+    iFramesPage.getResult().should('have.text', expectedText)
   })
 })

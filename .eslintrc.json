@@ -16,9 +16,23 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "cypress", "prettier"],
+  // "rules": {
+
+  //   "prettier/prettier": "error",
+  //   "@typescript-eslint/explicit-module-boundary-types": "off",
+  //   "@typescript-eslint/no-explicit-any": "off"
+  // }
+
   "rules": {
-    "prettier/prettier": "error",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-explicit-any": "off"
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "avoid",
+        "printWidth": 120,
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "all"
+      }
+    ]
   }
 }

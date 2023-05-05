@@ -41,7 +41,7 @@ const DynamicTablesTexts = {
 }
 
 const IFramesTexts = {
-  RESULT_MESSAGE: 'You entered: ',
+  RESULT_MESSAGE: 'You entered: {name}',
 }
 
 const LoginFormTexts = {
