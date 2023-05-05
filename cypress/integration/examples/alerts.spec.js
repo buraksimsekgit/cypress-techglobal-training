@@ -1,13 +1,14 @@
 /// <reference types="Cypress" />
 
 import { default as AlertPage } from '../../pages/alertPage'
+import { AlertTexts } from '../../enums/enums'
 
 describe('Alert Page', () => {
   const alertPage = new AlertPage()
 
   beforeEach(() => {
     cy.visitTechglobalTraining()
-    cy.contains('Alerts').click();
+    cy.contains('Alerts').click()
   })
 
   /**
@@ -27,8 +28,8 @@ describe('Alert Page', () => {
 
   it('validates the warning alert and result message', () => {
     alertPage.clickWarningAlertButton()
-    alertPage.validateAlertText('You are on TechGlobal Training application.')
+    alertPage.validateAlertText(AlertTexts.WARNING)
     alertPage.clickAlertOkButton()
-    alertPage.validateActionMessage('You accepted warning by clicking OK.')
+    alertPage.validateActionMessage(AlertTexts.ACTION_MESSAGE)
   })
 })

@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
 
+import { HomePageTexts } from '../../enums/enums'
 import { default as BasePage } from '../../pages/basePage'
 
 describe('Techglobal Training website', () => {
@@ -31,7 +32,7 @@ describe('Techglobal Training website', () => {
    */
 
   it('should display the logo and navigate to the frontend development page', () => {
-    const address = ['2860 S River Rd Suite 350, Des Plaines IL 60018', '© 2023 TechGlobal - All Rights Reserved']
+    const address = HomePageTexts.ADDRESS
 
     for (let i = 0; i < address.length; i++) {
       basePage.getAddressAndCopyright().eq(i).should('have.text', address[i])

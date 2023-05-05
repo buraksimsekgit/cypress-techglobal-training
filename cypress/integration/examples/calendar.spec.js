@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
 
+import { CalendarTexts, CalendarDates } from '../../enums/enums'
 import { default as CalendarPage } from '../../pages/calendarPage'
 
 describe('Validate date picker', () => {
@@ -12,9 +13,9 @@ describe('Validate date picker', () => {
     calendarPage.openDatePicker()
 
     // Storing these dates so we can use it later to validate
-    const targetYear = 2024,
-      targetMonth = 'May',
-      targetDate = 16
+    const targetYear = CalendarDates.TARGET_YEAR,
+      targetMonth = CalendarDates.TARGET_MONTH,
+      targetDate = CalendarDates.TARGET_DATE
 
     calendarPage.clickNextYearButton(targetYear)
     calendarPage.clickNextMonthButton(targetMonth)
@@ -41,6 +42,6 @@ describe('Validate date picker', () => {
     // Concatenating the formatted date parts
     const formattedDate = `${targetDayOfWeek} ${targetMonthFormatted} ${targetDateFormatted} ${targetYearFormatted}`
 
-    calendarPage.getResult().should('contain.text', `You have selected ${formattedDate}.`)
+    calendarPage.getResult().should('contain.text', `${CalendarTexts.CALENDAR_RESULT_TEXT} ${formattedDate}.`)
   })
 })

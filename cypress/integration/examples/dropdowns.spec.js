@@ -1,6 +1,7 @@
 /// <reference types="Cypress" />
 
 import { default as DropdownPage } from '../../pages/dropdownPage'
+import { DropdownTexts, DropdownInputs } from '../../enums/enums'
 
 describe('Dropdown Page', () => {
   const dropdownPage = new DropdownPage()
@@ -24,9 +25,9 @@ describe('Dropdown Page', () => {
    */
 
   it('should select product, color, and ship option, and validate the result text', () => {
-    const item = 'iPad Pro 11'
-    const color = 'Green'
-    const ship = 'Pick up'
+    const item = DropdownInputs.PRODUCT_OPTION
+    const color = DropdownInputs.COLOR_OPTION
+    const ship = DropdownInputs.SHIPPING_OPTION
 
     dropdownPage.selectProduct(item)
     dropdownPage.selectColor(color)
@@ -38,8 +39,8 @@ describe('Dropdown Page', () => {
 
     const expectedResultText =
       ship === 'Delivery'
-        ? `Your ${color} ${item} will be delivered to you.`
-        : `Your ${color} ${item} is ready to be picked up.`
+        ? DropdownTexts.RESULT_TEXT_DELIVERY.replace('{color}', color).replace('{product}', item)
+        : DropdownTexts.RESULT_TEXT_PICKUP.replace('{color}', color).replace('{product}', item)
 
     dropdownPage.validateResult(expectedResultText)
   })

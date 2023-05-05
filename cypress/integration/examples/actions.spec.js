@@ -2,6 +2,7 @@
 
 import 'cypress-real-events'
 import ActionsPage from '../../pages/actionsPage'
+import { ExpectedTexts } from '../../enums/enums'
 
 describe('Actions Test', () => {
   const actionsPage = new ActionsPage()
@@ -30,15 +31,15 @@ describe('Actions Test', () => {
     // Perform a click action on the first web element labeled "Click on me"
     actionsPage.clickButton().click()
 
-    actionsPage.clickResult().should('contain.text', 'You clicked on a button!')
+    actionsPage.clickResult().should('contain.text', ExpectedTexts.CLICK_BUTTON_TEXT)
 
     actionsPage.rightClickButton().rightclick()
 
-    actionsPage.rightClickResult().should('contain.text', 'You right-clicked on a button!')
+    actionsPage.rightClickResult().should('contain.text', ExpectedTexts.RIGHT_CLICK_BUTTON_TEXT)
 
     actionsPage.doubleClickButton().dblclick()
 
-    actionsPage.doubleClickResult().should('contain.text', 'You double-clicked on a button!')
+    actionsPage.doubleClickResult().should('contain.text', ExpectedTexts.DOUBLE_CLICK_BUTTON_TEXT)
   })
 
   it.skip('should drag and drop an element', () => {
