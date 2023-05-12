@@ -1,0 +1,13 @@
+stages:
+  - test
+
+Cypress Tests:
+  stage: test
+  image: node:14
+  script:
+    - echo "Installing dependencies..."
+    - npm ci
+    - echo "Running Cypress tests..."
+    - npm run test -- --config-file=cypress.config.js
+  only:
+    - main
