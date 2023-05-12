@@ -3,7 +3,7 @@
 import { default as XpathCssPage } from '../../pages/xpathCssPage'
 
 describe('Techglobal Training website', () => {
-  // const xpathCssPage = new XpathCssPage()
+  const xpathCssPage = new XpathCssPage()
 
   before(function () {
     cy.fixture('example').then(function (data) {

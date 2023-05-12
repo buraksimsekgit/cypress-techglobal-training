@@ -24,7 +24,7 @@ describe('Dynamic Table Test', () => {
    * Verify that the Total $ value at the bottom of the table has been updated to reflect the total cost of all the products in the table, including the newly added one.
    */
 
-  it('should add a new product to the table and validate the total', () => {
+  it('should add a new product to the table and validate the total', { tags: ['@smoke'] }, () => {
     // Store the initial table row size and validate it is 3 and store it inside the alias
     dynamicTablesPage.getTableRowSize().then(rowCount => {
       cy.wrap(rowCount).as('tableRowSize')

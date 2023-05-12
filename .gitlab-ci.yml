@@ -1,13 +1,13 @@
 stages:
   - test
 
-Cypress Tests:
+test:
+  image: node:latest
   stage: test
-  image: node:14
   script:
-    - echo "Installing dependencies..."
+    # install dependencies
     - npm ci
-    - echo "Running Cypress tests..."
-    - npm run test -- --config-file=cypress.config.js
-  only:
-    - main
+    # start the server in the background
+    - npm run start:ci &
+    # run Cypress tests
+    - npm run test:smoke

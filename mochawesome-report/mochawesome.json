@@ -1,0 +1,120 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 1,
+    "failures": -1,
+    "start": "2023-05-12T18:35:31.615Z",
+    "end": "2023-05-12T18:35:36.572Z",
+    "duration": 4957,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "540cc41e-73af-4254-ba62-b6b65e974470",
+      "title": "",
+      "fullFile": "cypress/integration/examples/pagination.spec.js",
+      "file": "cypress/integration/examples/pagination.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c4da1faa-49af-4d8b-bb06-3755d2d48fe0",
+          "title": "Validate the main content of the Pagination Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Navigates to the Pagination page and validates its content",
+              "fullTitle": "Validate the main content of the Pagination Page Navigates to the Pagination page and validates its content",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.url().should('eq', 'https://techglobal-training.com/frontend/pagination');\npaginationPage.mainHeading().should('have.text', 'Pagination');\npaginationPage.subHeading().should('have.text', 'World City Populations 2022');\npaginationPage.content().should('be.visible');",
+              "err": {},
+              "uuid": "62066f0a-2cff-4add-8be9-c884c2a78a75",
+              "parentUUID": "c4da1faa-49af-4d8b-bb06-3755d2d48fe0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validates the Pagination Page Next/Previous buttons",
+              "fullTitle": "Validate the main content of the Pagination Page Validates the Pagination Page Next/Previous buttons",
+              "timedOut": null,
+              "duration": 3972,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.url().should('eq', 'https://techglobal-training.com/frontend/pagination');\npaginationPage.previousButton().should('be.disabled');\npaginationPage.nextButton().should('be.enabled');\npaginationPage.nextButton().click();\npaginationPage.previousButton().should('be.enabled');\npaginationPage.clickNextButtonTillDisabled();\npaginationPage.previousButton().should('be.enabled');\npaginationPage.nextButton().should('be.disabled');",
+              "err": {},
+              "uuid": "981423d2-f196-448c-ac35-affeed302f8e",
+              "parentUUID": "c4da1faa-49af-4d8b-bb06-3755d2d48fe0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "981423d2-f196-448c-ac35-affeed302f8e"
+          ],
+          "failures": [],
+          "pending": [
+            "62066f0a-2cff-4add-8be9-c884c2a78a75"
+          ],
+          "skipped": [],
+          "duration": 3972,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

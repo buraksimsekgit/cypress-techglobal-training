@@ -47,7 +47,7 @@ describe('Validate the main content of the Pagination Page', () => {
    * Check if the "Next" button is disabled
    */
 
-  it('Validates the Pagination Page Next/Previous buttons', () => {
+  it('Validates the Pagination Page Next/Previous buttons', { tags: ['@smoke'] }, () => {
     cy.url().should('eq', 'https://techglobal-training.com/frontend/pagination')
     paginationPage.previousButton().should('be.disabled')
     paginationPage.nextButton().should('be.enabled')
