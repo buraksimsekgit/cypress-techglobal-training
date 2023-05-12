@@ -1,0 +1,19 @@
+name: Mirror to GitLab
+
+on: [push]
+
+jobs:
+  to_gitlab:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Mirror Repository to GitLab
+      uses: wearerequired/git-mirror-action@master
+      env:
+        # GitLab Access Token
+        GIT_PASSWORD: ${{ secrets.GITLAB_TOKEN }}
+      with:
+        # GitHub repository URL
+        source-repo: "https://github.com/buraksimsekgit/cypress-techglobal-training.git"
+        # GitLab repository URL
+        destination-repo: "https://gitlab.com/simsek.bl/cypress-techglobal-training"
