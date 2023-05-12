@@ -48,7 +48,7 @@ describe('Actions Test', () => {
       dataTransfer,
     })
 
-    cy.get('#drop_element').trigger('drop',{
+    cy.get('#drop_element').trigger('drop', {
       dataTransfer,
     })
   })
