@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 1,
     "failures": -1,
-    "start": "2023-05-12T18:35:31.615Z",
-    "end": "2023-05-12T18:35:36.572Z",
-    "duration": 4957,
+    "start": "2023-05-12T20:16:59.601Z",
+    "end": "2023-05-12T20:17:05.180Z",
+    "duration": 5579,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 50,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "540cc41e-73af-4254-ba62-b6b65e974470",
+      "uuid": "ee215c42-c8b7-436a-b6e5-b7d99a320ef1",
       "title": "",
       "fullFile": "cypress/integration/examples/pagination.spec.js",
       "file": "cypress/integration/examples/pagination.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c4da1faa-49af-4d8b-bb06-3755d2d48fe0",
+          "uuid": "5914a459-0dd6-41d4-9598-e5e54a57dd99",
           "title": "Validate the main content of the Pagination Page",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.url().should('eq', 'https://techglobal-training.com/frontend/pagination');\npaginationPage.mainHeading().should('have.text', 'Pagination');\npaginationPage.subHeading().should('have.text', 'World City Populations 2022');\npaginationPage.content().should('be.visible');",
               "err": {},
-              "uuid": "62066f0a-2cff-4add-8be9-c884c2a78a75",
-              "parentUUID": "c4da1faa-49af-4d8b-bb06-3755d2d48fe0",
+              "uuid": "462cc6d1-4e7e-435b-8cbf-46b6a96a684d",
+              "parentUUID": "5914a459-0dd6-41d4-9598-e5e54a57dd99",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Validates the Pagination Page Next/Previous buttons",
               "fullTitle": "Validate the main content of the Pagination Page Validates the Pagination Page Next/Previous buttons",
               "timedOut": null,
-              "duration": 3972,
+              "duration": 3721,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,22 +65,22 @@
               "context": null,
               "code": "cy.url().should('eq', 'https://techglobal-training.com/frontend/pagination');\npaginationPage.previousButton().should('be.disabled');\npaginationPage.nextButton().should('be.enabled');\npaginationPage.nextButton().click();\npaginationPage.previousButton().should('be.enabled');\npaginationPage.clickNextButtonTillDisabled();\npaginationPage.previousButton().should('be.enabled');\npaginationPage.nextButton().should('be.disabled');",
               "err": {},
-              "uuid": "981423d2-f196-448c-ac35-affeed302f8e",
-              "parentUUID": "c4da1faa-49af-4d8b-bb06-3755d2d48fe0",
+              "uuid": "33286e5a-5925-4bde-af83-a794a1e64fe2",
+              "parentUUID": "5914a459-0dd6-41d4-9598-e5e54a57dd99",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "981423d2-f196-448c-ac35-affeed302f8e"
+            "33286e5a-5925-4bde-af83-a794a1e64fe2"
           ],
           "failures": [],
           "pending": [
-            "62066f0a-2cff-4add-8be9-c884c2a78a75"
+            "462cc6d1-4e7e-435b-8cbf-46b6a96a684d"
           ],
           "skipped": [],
-          "duration": 3972,
+          "duration": 3721,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
