@@ -7,6 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
     - name: Mirror Repository to GitLab
       uses: pixta-dev/repository-mirroring-action@v1
       with:
