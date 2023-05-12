@@ -8,12 +8,6 @@ jobs:
 
     steps:
     - name: Mirror Repository to GitLab
-      uses: wearerequired/git-mirror-action@master
-      env:
-        # GitLab Access Token
-        GIT_PASSWORD: ${{ secrets.GITLAB_TOKEN }}
+      uses: pixta-dev/repository-mirroring-action@v1
       with:
-        # GitHub repository URL
-        source-repo: "https://github.com/buraksimsekgit/cypress-techglobal-training.git"
-        # GitLab repository URL
-        destination-repo: "https://gitlab.com/simsek.bl/cypress-techglobal-training"
+        target_repo_url: "https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/simsek.bl/cypress-techglobal-training.git"
