@@ -4,7 +4,15 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   defaultCommandTimeout: 6000,
-  reporter: 'mochawesome',
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    reportDir: 'cypress/reports',
+    charts: true,
+    reportPageTitle: 'custom-title',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+  },
   env: {
     url: 'http://www.techglobal-training.com/',
   },
@@ -14,6 +22,7 @@ module.exports = defineConfig({
   },
   e2e: {
     setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on)
       require('@cypress/grep/src/plugin')(config)
       return config
       // implement node event listeners here

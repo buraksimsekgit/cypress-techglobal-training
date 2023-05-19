@@ -25,7 +25,6 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-
 /**
  * Visits the application URL specified in the Cypress environment variable `url`,
  * asserts that the page title matches the expected title, and clicks on the

@@ -1,6 +1,6 @@
 class RadioButtonsPage {
   getRadioButtons() {
-    return cy.get("#radio-button-group_1 input");
+    return cy.get('#radio-button-group_1 input')
   }
 
   /**
@@ -9,7 +9,7 @@ class RadioButtonsPage {
    */
 
   selectRadioButton(optionId) {
-    cy.get(`#${optionId}`).check().should("be.checked");
+    cy.get(`#${optionId}`).check().should('be.checked')
   }
 
   /**
@@ -20,17 +20,17 @@ class RadioButtonsPage {
 
   validateRadioButtonState(expectedState) {
     this.getRadioButtons()
-      .should("have.length", 3)
-      .each((radioButton) => {
-        const label = Cypress.$(radioButton).parent().text().trim();
+      .should('have.length', 3)
+      .each(radioButton => {
+        const label = Cypress.$(radioButton).parent().text().trim()
 
         if (label === expectedState.checked) {
-          expect(radioButton).to.be.checked;
+          expect(radioButton).to.be.checked
         } else {
-          expect(radioButton).to.not.be.checked;
+          expect(radioButton).to.not.be.checked
         }
-      });
+      })
   }
 }
 
-export default RadioButtonsPage;
+export default RadioButtonsPage

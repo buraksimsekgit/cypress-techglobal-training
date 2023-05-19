@@ -21,3 +21,10 @@ jobs:
           node-version: '14'
           start: npm run test -- --config-file=cypress.config.js
           config-file: 'cypress.config.js'
+          # Assuming Mochawesome report is configured properly, it will be generated during this step
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: cypress/reports # Updated with your report directory

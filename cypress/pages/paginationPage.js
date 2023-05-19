@@ -1,23 +1,22 @@
 class PaginationPage {
-
   mainHeading() {
-    return cy.get("#main_heading");
+    return cy.get('#main_heading')
   }
 
   subHeading() {
-    return cy.get("#sub_heading");
+    return cy.get('#sub_heading')
   }
 
   content() {
-    return cy.get("#content");
+    return cy.get('#content')
   }
 
   previousButton() {
-    return cy.get("#previous");
+    return cy.get('#previous')
   }
 
   nextButton() {
-    return cy.get("#next");
+    return cy.get('#next')
   }
 
   /**
@@ -27,14 +26,14 @@ class PaginationPage {
    */
 
   clickNextButtonTillDisabled() {
-    this.nextButton().then(($nextBtn) => {
-      if ($nextBtn.is(":enabled")) {
-        cy.wrap($nextBtn).click();
-        cy.wait(500);
-        this.clickNextButtonTillDisabled();
+    this.nextButton().then($nextBtn => {
+      if ($nextBtn.is(':enabled')) {
+        cy.wrap($nextBtn).click()
+        cy.wait(500)
+        this.clickNextButtonTillDisabled()
       }
-    });
+    })
   }
 }
 
-export default PaginationPage;
+export default PaginationPage
