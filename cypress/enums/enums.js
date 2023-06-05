@@ -20,7 +20,7 @@ const CalendarTexts = {
 }
 
 const CalendarDates = {
-  TARGET_YEAR: 2024,
+  TARGET_YEAR: 2025,
   TARGET_MONTH: 'May',
   TARGET_DATE: 16,
 }

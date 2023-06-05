@@ -17,8 +17,8 @@ describe('Validate date picker', () => {
       targetMonth = CalendarDates.TARGET_MONTH,
       targetDate = CalendarDates.TARGET_DATE
 
-    calendarPage.clickNextYearButton(targetYear)
     calendarPage.clickNextMonthButton(targetMonth)
+    calendarPage.clickNextYearButton(targetYear)
     calendarPage.getDateButton(targetDate).click()
 
     // Get the day of the week, month, and date for the target date

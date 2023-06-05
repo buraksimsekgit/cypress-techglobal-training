@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2023-06-03T14:31:19.439Z",
+    "end": "2023-06-03T14:31:23.666Z",
+    "duration": 4227,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0bd16418-a9e2-46e9-b85d-6afca2a8a5ac",
+      "title": "",
+      "fullFile": "cypress/integration/examples/actions.spec.js",
+      "file": "cypress/integration/examples/actions.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d77044cf-4f68-4aaa-a29d-1078e86ad2fe",
+          "title": "Actions Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should perform click, right-click, and double-click actions",
+              "fullTitle": "Actions Test should perform click, right-click, and double-click actions",
+              "timedOut": null,
+              "duration": 3029,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Perform a click action on the first web element labeled \"Click on me\"\nactionsPage.clickButton().click();\nactionsPage.clickResult().should('contain.text', _enums.ExpectedTexts.CLICK_BUTTON_TEXT);\nactionsPage.rightClickButton().rightclick();\nactionsPage.rightClickResult().should('contain.text', _enums.ExpectedTexts.RIGHT_CLICK_BUTTON_TEXT);\nactionsPage.doubleClickButton().dblclick();\nactionsPage.doubleClickResult().should('contain.text', _enums.ExpectedTexts.DOUBLE_CLICK_BUTTON_TEXT);",
+              "err": {},
+              "uuid": "19b0a82d-3713-4e91-a530-e42032bd07e2",
+              "parentUUID": "d77044cf-4f68-4aaa-a29d-1078e86ad2fe",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should drag and drop an element",
+              "fullTitle": "Actions Test should drag and drop an element",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "const dataTransfer = new DataTransfer();\ncy.get('#drag_element').trigger('dragstart', {\n  dataTransfer\n});\ncy.get('#drop_element').trigger('drop', {\n  dataTransfer\n});",
+              "err": {},
+              "uuid": "4e65bb15-7522-4d30-bd6f-0ac74036ff60",
+              "parentUUID": "d77044cf-4f68-4aaa-a29d-1078e86ad2fe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "19b0a82d-3713-4e91-a530-e42032bd07e2"
+          ],
+          "failures": [],
+          "pending": [
+            "4e65bb15-7522-4d30-bd6f-0ac74036ff60"
+          ],
+          "skipped": [],
+          "duration": 3029,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
